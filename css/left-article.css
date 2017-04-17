@@ -1,0 +1,183 @@
+
+.left-article{
+	position:relative;
+	width:100%;
+	display:block;
+	z-index:10;
+}
+.left-article i{
+	display:block;
+	width:100%;
+	border-bottom:1px solid rgb(204,204,204);
+	margin:10px 0;
+}
+.left-article{
+	width:100%;
+	display:block;
+	position:relative;
+}
+.left-article .from{
+	display:block;
+}
+.from span:last-child:hover{
+	color:rgb(178,178,178);
+}
+.from .from-til{
+	display:inline-block;
+	padding-left:10px;
+}
+.from-til span{
+	cursor:pointer;
+}
+.from-til span:hover{
+	text-decoration:underline;
+	color:rgb(34,85,153);
+}
+.from img{
+	width:38px;
+	height:38px;
+	display:inline-block;
+	border-radius:3px;
+	vertical-align:top;
+}
+.from-til h6{
+	color:#999;
+	font-weight:normal;
+	letter-spacing:1px;
+}
+.from-til a{
+	color:#259;
+	font-size:14px;
+	font-weight:700;
+	line-height:25px;
+}
+.from-til a:hover{
+	text-decoration:underline;
+}
+.article-warp{
+	margin-left:52px;
+	display:block;
+	position:relative;/*relative只能设置在inline-block元素或者block元素上，即使是默认block(或inline-block)元素有时也要明确标明*/
+}
+.article-author{
+	line-height:26px;
+	/*若不设置宽度，不会撑破div，而是自适应margin*/
+}
+.cik{
+	display:block;
+	position:absolute;
+	height:24px;
+	width:38px;
+	line-height:24px;
+	color:#689ebf;
+	text-align:center;
+	border-radius:3px;
+	background:#eff6fa;
+	font-weight:500;
+	font-size:13px;
+	left:-52px;
+	top:2px;
+}
+.article-author a{
+	font-size:13px;
+	color:#222;
+	font-weight:bold;
+}
+.article-author a:hover{
+	text-decoration:underline;
+}
+.article-author a:not(:first-child):hover{
+	text-decoration:none;
+}
+.article-author span{
+	color:#999;
+	font-size:13px;
+}
+.article-content{
+	word-wrap:break-word;/*css3允许换行*/
+	cursor:pointer;
+	position:relative;
+	width:100%;
+}
+.article-content img{
+	float:left;
+	display:block;
+	height:112px;
+	width:200px;
+	margin: 1px 10px 5px 0;
+	border-radius:4px;
+}
+.article-content p{
+	display:block;
+	font-size:13px;
+	max-width:62.79%;
+	float:right;
+	line-height:22px;
+}
+.article-content p>a{
+	display:inline-block;
+	font-size:13px;
+	color:rgb(34,85,153);
+	padding:0px 3px;
+	border-radius:3px;
+}
+.article-content .content-bottom{
+	clear:both;
+	width:100%;
+	display:block;
+	padding:10px 0;
+	color:#999;
+	position:relative;
+}
+.content-bottom a{
+	display:inline-block;
+	margin-left:3px;
+	font-size:13px;
+	color:#999;
+}
+.content-bottom span{
+	font-size:12px;
+	display:inline-block;
+	vertical-align:1px;
+	margin-right:3px;
+}
+.content-bottom > a:not(:first-child){
+	margin-left:9px;
+}
+.content-bottom > a:first-child:hover{
+	color:rgb(34,85,153);
+	text-decoration:underline;
+}
+.content-bottom > a:not(:first-child):hover{
+	color:rgb(105,142,191);
+	text-decoration:underline;
+}
+
+/*article-content:hover*/
+.article-author h6{
+	font-size:12px;
+	color:#999;
+	line-height:24px;
+	font-weight:normal;
+}
+.article-warp .agree{
+	font-size:20px;
+	line-height:0;
+	width:38px;
+	height:20px;
+}
+.article-warp .cik:hover{
+	background:rgb(105,142,191);
+	color:#fff;
+	cursor:pointer;
+}
+.content-bottom a:last-child{
+	position:fixed;
+	padding:3px 6px 2px;
+	border-radius:3px;
+	background:rgb(140,192,236);
+	margin:5px 0 0 70px;
+	bottom:10px;
+	color:#fff;
+	display:none;
+}

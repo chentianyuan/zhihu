@@ -1,0 +1,226 @@
+*{
+	padding:0;
+	margin:0;
+	font-family: FontAwesome !important;
+}
+a{
+	cursor:pointer;
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+/*头部样式*/
+.header{
+	position:fixed;
+	width:100%;
+	height:45px;
+	/*背景颜色渐变*/
+	background: -webkit-linear-gradient(rgb(8,110,212), rgb(5,93,181)); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(rgb(8,110,212), rgb(5,93,181)); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(rgb(8,110,212), rgb(5,93,181)); /* Firefox 3.6 - 15 */
+	background: linear-gradient(rgb(8,110,212), rgb(5,93,181)); /* 标准的语法 */
+	transition:all 3s;/*过渡*/
+	z-index:2;
+}
+.header-content{
+	width:960px;/*主题内容设置固定宽度，设备宽度小于一定宽度时再改变，否则易完全变形*/
+	height:45px;
+	margin:0 auto;
+}
+.til{
+	display:inline-block;
+	width:61px;
+	height:100%;
+	float:left;
+	line-height:45px;
+	font-size:28px;
+	color:rgba(255,255,255,1);
+	letter-spacing:1px;
+	z-index:1;
+	font-weight:bold;
+	-webkit-font-smoothing:antialiased;/*抗锯齿*/
+}
+.header-content .search{
+	display:inline-block;
+	border:1px solid rgb(4,91,178);
+	border-radius:3px;
+	margin:7px 0 0 12px;
+	width:357px;
+	vertical-align:top;
+}
+.header-content input{
+	display:inline-block;
+	outline:none;
+	border:0;
+	height:30px;
+	line-height:30px;
+	width:314px;
+	font-size:14px;
+	padding-left:12px;
+	background:rgb(225,234,242);
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;	
+	transition: all .2s ease-in-out;/*设置渐变，使hover不突兀更加自然*/
+	/*box-shadow:1px 1px 3px inset;*/
+}
+.header-content input:hover{
+	background:rgb(255,255,255);
+}
+.header-content button{
+	cursor:pointer;
+	display:inline-block;
+	height:30px;
+	width:30px;
+	background: rgb(13,120,233);
+	border:none;
+	outline:none;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;	
+	margin-left:-3px;
+	vertical-align:top;
+}
+.header-content .lists{
+	margin:0 0 0 18px;
+	display:inline-block;
+}
+.header-content .lists li{
+	float:left;
+}
+.header-content .lists li a{
+	display:block;
+	text-shadow: 0 1px 1px rgba(0,0,0,.12);
+	color:rgba(255,255,255,0.9);
+	width:54px;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	font-size:14px;
+}
+.active{
+	box-shadow:inset 0 0 2px rgba(0,0,0,.12);
+	background:rgb(8,95,180);
+	text-shadow: 0 1px 1px rgba(0,0,0,.12);
+}
+.header-content ul li a:hover{
+	color:rgba(255,255,255,1);
+	text-shadow: 0 1px 1px rgba(0,0,0,.12);
+}
+.header-content .ask{
+	float:right;
+	width:66px;
+	height:32px;
+	line-height:30px;
+	border: 1px solid #045bb2;
+	border-radius:4px;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	text-shadow: 0 1px 1px rgba(0,0,0,.12);
+	outline:0;
+	margin-top:7px;
+}
+.header-content .name{
+	position:relative;
+	float:right;
+	width:120px;
+	margin-left:15px;
+	height:100%;
+}
+.header-content img{
+	position:absolute;
+	top:9px;
+	left:10px;
+	display:inline-block;
+	width:25px;
+	height:25px;
+	box-shadow: 0 1px 0 rgba(255,255,255,.1);
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius:3px;
+}
+.name .usename{
+	position:absolute;
+	left:45px;
+	color:#fff;
+	line-height:45px;	
+	font-size:14px;
+}
+.name ul{
+	width:100%;
+	position:absolute;
+	top:45px;
+	margin:0;
+}
+.name ul li{
+	float:none;
+	background:rgb(9,95,179);
+	width:120px;
+}
+.name ul li a{
+	display:block;
+	height:40px;
+	color:#fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,.4);
+	line-height:40px;	
+	font-size:14px;
+}
+.name ul li span{
+	width:40px;
+	height:40px;
+	display:inline-block;
+	font-weight:bold;
+	font-size:14px;
+	text-align:center;
+	line-height:40px;
+}
+.main-content{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+	padding: 70px 0 50px;
+}
+.name ul li:hover ul{
+	display:block;
+}
+
+
+/*网页自适应设置*/
+@media screen and (max-width: 959px) and (min-width: 770px){
+	.header-content{
+		width:auto;
+	}
+	.main-content{
+		width:auto;
+	}
+	.left-header ul{
+		width:auto;
+	}
+	.article-content p{
+		width:52%;
+		margin: auto;
+	}
+}
+@media screen and (max-width:769px) and (min-width: 598px){
+	.right-content{
+		display:none;
+	}
+	.left-content{
+		width:100% !important;
+	}
+	.header-content{
+		width:100% !important;
+	}
+	.main-content{
+		width:100% !important;
+	}
+	.search{
+		width:auto !important;
+	}
+	.search input{
+		width:auto;
+	}
+	.article-content p{
+		width:59.79%;
+		margin:auto;
+	}
+}

@@ -1,0 +1,136 @@
+/*左部内容*/
+.main-content{
+	z-index:1;
+}/*
+  	body的默认z-index为0
+  	关于.name元素被遮挡问题
+	定位元素A（z-index:100）里面有定位元素A1（z-index:300）
+	而定位元素B和元素A兄弟关系（z-index:200）。
+	你会发现无论A1的z-index是多大，也会被z-index是200的B所覆盖，因为A的z-index只有100。
+*/
+.main-content .left-content{
+	position:relative;
+	width:65%;
+	z-index:9;
+	float:left;
+
+}
+.left-content .left-header{
+	width:100%;
+	margin-bottom:30px;
+	height:48px;
+	line-height:48px;
+}
+.left-header img{
+	display:inline-block;
+	float:left;
+	position:relative;
+	width:38px;
+	height:38px;
+	border-radius:3px;
+}
+.left-header ul{
+	position:relative;
+	display:block;
+	width:87%;
+	vertical-align:top;
+	background:rgb(250,250,250);
+	border:1px solid #f0f0f0;
+	margin-left:23px;
+	border-radius:4px;
+	float:right;
+	z-index:1;
+}
+.left-header ul:before{
+	content:'';
+	position:absolute;
+	top:10px;
+	left:-10px;
+	border-top:10px solid rgb(250,250,250);
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	z-index:2;
+}
+.left-header ul:after{
+	content:'';
+	position:absolute;
+	top:10px;
+	left:-10px;
+	border-top:10px solid #f0f0f0;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	z-index:-1;
+}
+.left-header ul li{
+	float:left;
+	line-height:48px;
+	padding: 0 32px 0 27px;
+	font-size:14px;
+}
+.left-header ul li a{
+	display:inline-block;
+	color:#6c829f;
+}
+.left-header ul li span{
+	display:inline-block;
+	vertical-align:middle;
+	width:24px;
+	height:24px;
+	text-align:left;
+	line-height:24px;
+}
+
+.left-header ul li:hover a{
+	color:rgba(34,85,153,1);
+}
+
+.left-header ul li:last-child{
+	float:right;
+	font-size:11px;
+	padding:0;
+	margin-right:20px;
+}
+
+.left-til{
+	width:100%;
+	display:block;
+	margin:0 0 10px;
+	line-height:1.7;
+	height:24px;
+}
+.left-til .new{
+	float:left;
+	display:inline-block;
+	font-size:14px;
+	color:#666;
+	cursor:default;
+	font-weight:700;
+}
+.new span{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	vertical-align:-2px;
+	margin-right:5px;
+	font-size:15px;
+	font-weight:400;
+	opacity:0.9;
+}
+.left-til .set{
+	float:right;
+	display:inline-block;
+	font-size:13px;
+	color:#999;
+	opacity:0.9;
+}
+.set span{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:1px;
+	font-weight:normal;
+}
